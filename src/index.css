@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "VT323";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/vt323/vt323-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BalAstaral";
+  src: url("./assets/fonts/MoonwalkMiss-BgZB.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "lato";
+  src: url("./assets/fonts/Lato/Lato-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "kanit";
+  src:url("./assets/fonts/Kanit/Kanit-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Valorant";
+  src:url("./assets/fonts/Valorant\ Font.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+:root {
+    background-color: #010004;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    overflow-x: hidden;
+    margin: 0;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87); 
+
+    
+}

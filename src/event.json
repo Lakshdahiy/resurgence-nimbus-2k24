@@ -1,0 +1,74 @@
+{
+
+    "events":[
+        {
+            "name":"Valorant-Try Outs" ,
+            "photo":"https://res.cloudinary.com/dbcuaopfk/image/upload/v1696961477/Snapinsta.app_373048871_828255128897517_928390467703619990_n_1080_d0tzu6.jpg" ,
+            "desc":"Resurgence organized Valorant tryouts from 4th September to 6th September"
+
+
+
+        },
+        {
+            "name":"BGMI-Try Outs" ,
+            "photo":"https://res.cloudinary.com/dbcuaopfk/image/upload/v1696961477/WhatsApp_Image_2023-10-10_at_22.03.20_gqi4nk.jpg" ,
+            "desc":"Resurgence organized BGMI tryouts on 10th September"
+
+
+
+        },
+        {
+            "name":"Stumble Guys" ,
+            "photo":"https://res.cloudinary.com/dbcuaopfk/image/upload/v1696961477/WhatsApp_Image_2023-10-10_at_22.03.44_zcuiup.jpg" ,
+            "desc":"Resurgence organized Stumble Guys Tournament on 10th September"
+
+
+
+        },
+        {
+            "name":"Free To Play" ,
+            "photo":"https://res.cloudinary.com/dbcuaopfk/image/upload/v1696962068/Snapinsta.app_376283522_1010138286920644_3166755428674393509_n_1080_qsfu30.jpg" ,
+            "desc":"Resurgence hosted a free to play event, which took place on 11th September"
+
+
+
+        },
+        {
+            "name":"BGMI Tournament" ,
+            "photo":"https://res.cloudinary.com/dbcuaopfk/image/upload/v1696961477/WhatsApp_Image_2023-10-10_at_22.03.58_yzzaf3.jpg" ,
+            "desc":"Resurgence hosted an esports tournament of BGMI, which took place from 28th September to 1st October"
+
+
+
+        },
+        {
+            "name":"Games And Groves" ,
+            "photo":"https://res.cloudinary.com/dbcuaopfk/image/upload/v1696962068/WhatsApp_Image_2023-10-02_at_11.24.53_tszyp4.jpg" ,
+            "desc":"Resurgence hosted an esports tournament featuring FIFA 19 and Tekken 7, which took place from 5th October to 7th October"
+
+
+
+
+        },
+        {
+            "name":"Valorant Tournament" ,
+            "photo":"https://res.cloudinary.com/dbcuaopfk/image/upload/v1696962068/WhatsApp_Image_2023-10-10_at_21.20.39_o84lmt.jpg" ,
+            "desc":"Resurgence is hosted an esports tournament of Valorant, which took place from 11th October to 13th October"
+
+
+
+        },
+        {
+            "name":"Squid Games" ,
+            "photo":"" ,
+            "desc":"Resurgence organizing Squid games on 15th October"
+
+
+
+        }
+    ]
+
+
+
+
+}
