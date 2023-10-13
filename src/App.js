@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import OurTeam from "./pages/OurTeam";
 import Events from "./pages/Events";
 import Navbar from "./components/Navbar";
-import { ReactNavbar } from "./lib/overlay-nav";
 import NavBar from "./components/burgerMenu";
 
 function App() {
