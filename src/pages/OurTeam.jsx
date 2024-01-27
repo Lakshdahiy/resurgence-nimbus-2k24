@@ -32,9 +32,9 @@ const Events = () => {
     return (
         <>
             {" "}
-            <div className="absolute z-[-1] ">
+            {/* <div className="absolute z-[-1] ">
                 <BackgroundParticles />
-            </div>
+            </div> */}
             <div className="relative">
             <div className="absolute z-[-1] inset-0 bg-gray-900 bg-opacity-40 backdrop-blur-sm" />
 

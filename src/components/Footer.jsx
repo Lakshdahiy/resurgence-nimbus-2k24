@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.png";
 import SocialLinks from "./SocialMedia";
 import { Avatar } from "@material-tailwind/react";
 import HorizontalLine from "./HorizontalLine";
+import MailTo from "./MailTo";
 
 const FooterWithLogo = () => {
     return (
@@ -54,11 +55,11 @@ const FooterWithLogo = () => {
                         <li>
                             <Typography
                                 as="a"
-                                href="#contactus"
                                 color="white"
                                 className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                             >
-                                Contact Us
+                                    <MailTo label="Contact Us" mailto="mailto:resurgencenith@gmail.com"/>
+                                
                             </Typography>
                         </li>
                     </ul>

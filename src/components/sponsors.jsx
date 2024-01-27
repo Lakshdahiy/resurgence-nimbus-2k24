@@ -27,7 +27,7 @@ const Sponsors = () => {
                     /></div>
 
                 </div>
-                <div className="sponsors flex grow justify-evenly my-[2rem]">
+                {/* <div className="sponsors flex grow justify-evenly my-[2rem]">
                     <div><img
                         src={logo}
                         alt="sad"
@@ -48,7 +48,7 @@ const Sponsors = () => {
                         alt="sad"
                         className="    w-[10rem]   "
                     /></div>
-                </div>
+                </div> */}
             </div>
         </>
     )

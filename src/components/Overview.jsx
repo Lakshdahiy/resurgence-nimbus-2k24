@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import config from "../App.config";
 import images from "../assets/images/images";
+import Service from "./Service.jsx";
 
 const Overview = () => {
     return (
@@ -27,13 +28,17 @@ const Overview = () => {
                         communicate with each other before, during, and after
                         matches
                     </Typography>
-                    {/* <div className="flex ">
+                    <div className="grid grid-cols-1 lg:grid-cols-4 ml-16 lg:m-4 lg:p-[40px]">
                     {config.whatDoWeDo.map((service, index) => {
                         return (
-                            
+                            <Service
+                                key={service.title}
+                                index={index}
+                                {...service}
+                            />
                         );
                     })}
-                </div> */}
+                </div>
                 </div>
             </div>
         </>

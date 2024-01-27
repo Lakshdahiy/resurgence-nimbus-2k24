@@ -22,8 +22,8 @@ const Service =({ index, title }) => {
                 initial={{ x: "-150px", opacity: 0 }}
                 transition={{
                     type: "spring",
-                    delay: 0.3 + index * 0.2,
-                    duration: 0.25,
+                    delay: 0.1 + (index+1)*0.2,
+                    duration: 0.40,
                     ease: "easeOut",
                 }}
                 ref={ref}

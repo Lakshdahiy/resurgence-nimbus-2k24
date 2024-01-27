@@ -24,7 +24,7 @@ export default function EarthCanvas() {
         far: 200,
         position: [-4, 3, 6],
       }}
-      style={{width:'400px',height:'100%'}} 
+      style={{width:'400px','max-height':'500px'}} 
     >
       <Suspense fallback={<>loading...</>}>
         <OrbitControls

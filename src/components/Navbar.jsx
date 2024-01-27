@@ -1,94 +1,136 @@
 import React from "react";
 import {
-    Navbar,
-    Collapse,
-    Typography,
-    IconButton,
-    Avatar,
+  Button,
+  Dialog,
+  DialogHeader,
+  Typography,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
 import image from "../assets/images/logo.png";
+import SocialLinks from "./SocialMedia";
+import SnackBar from "../utils/Snackbar";
+import { Link } from "react-router-dom";
 
+const NavBar = () => {
+  const [open, setOpen] = React.useState(false);
 
+  const handleOpen = () => setOpen(!open);
 
-const NavbarDefault = () => {
-    const [openNav, setOpenNav] = React.useState(false);
-    React.useEffect(() => {
-        window.addEventListener(
-            "resize",
-            () => window.innerWidth >= 960 && setOpenNav(false)
-        );
-    }, []);
-    const navList = (
-        <ul className=" mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-12">
-            <Typography as="li" color="white" className="custom-font2 p-1 ">
-                <Link to="/" className="custom-font2 flex items-center ">
-                    Home
-                </Link>
-            </Typography>
-            <Typography as="li" color="white" className="p-1 ">
-                <Link to="/team" className="flex items-center custom-font2">
-                    Team
-                </Link>
-            </Typography>
-            <Typography as="li" color="white" className="p-1 2">
-                <Link to="/events" className="flex items-center custom-font2">
-                    Events
-                </Link>
-            </Typography>
-        </ul>
-    );
-    return (
-        <div className="fixed top-0 left-0 w-full bg-[#141414] border-b-2 border-gray-700/40 z-50">
-            <div className=" mx-auto border-none py-2 px-6 lg:px-8 lg:py-4">
-                <div className="flex items-center justify-between text-white">
-                    <Avatar src={image} alt="avatar" />
-                    <div className="hidden lg:block">{navList}</div>
-                    <IconButton
-                        variant="text"
-                        className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-                        ripple={false}
-                        onClick={() => setOpenNav(!openNav)}
-                    >
-                        {openNav ? (
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                className="h-6 w-6"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth={2}
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M6 18L18 6M6 6l12 12"
-                                />
-                            </svg>
-                        ) : (
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-6 w-6"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth={2}
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M4 6h16M4 12h16M4 18h16"
-                                />
-                            </svg>
-                        )}
-                    </IconButton>
-                </div>
-                <Collapse open={openNav}>
-                    <div className="container mx-auto">{navList}</div>
-                </Collapse>
+  return (
+    <div className="sticky z-20">
+      <Button onClick={handleOpen} className="bg-transparent text-[1.2rem] ">
+        ☰
+      </Button>
+      <Dialog
+        open={open}
+        handler={handleOpen}
+        size="xxl"
+        className="bg-[rgba(0,0,0,0.9)]"
+      >
+        <div className="flex flex-col justify-end">
+          <div className="flex justify-end my-px">
+            <DialogHeader>
+              <Button
+                variant="text"
+                color="white"
+                onClick={handleOpen}
+                className="mx-1 text-[1.2rem] bg-[rgba(0,0,0,0.9)]"
+              >
+                X
+              </Button>
+            </DialogHeader>
+          </div>
+          <div className="flex justify-around">
+            <div className="img flex justify-center">
+              <img
+                className="w-48 lg:h-96 lg:w-96  object-cover "
+                src={image}
+                alt="nature image"
+              />
             </div>
+            <div className="flex flex-col lg:flex-row justify-evenly gap-4 ">
+              <div className="flex flex-col  justify-center items-center gap-4">
+                <Typography
+                  as="li"
+                  variant="xl"
+                  color="white"
+                  className="p-1 font-normal"
+                >
+                  <Link
+                    to="/home"
+                    className=" flex items-center custom-font1 text-[2rem]"
+                    onClick={handleOpen}
+                  >
+                    HOME
+                  </Link>
+                </Typography>{" "}
+                <Typography
+                  as="li"
+                  variant="xl"
+                  color="white"
+                  className="p-1 font-normal"
+                >
+                  <Link
+                    to="/events"
+                    className="flex items-center custom-font1 text-[2rem]"
+                    onClick={handleOpen}
+                  >
+                    Events
+                  </Link>
+                </Typography>{" "}
+                <Typography
+                  as="li"
+                  variant="xl"
+                  color="white"
+                  className="p-1 font-normal"
+                >
+                  <Link
+                    to="/team"
+                    className="flex items-center custom-font1 text-[2rem]"
+                    onClick={handleOpen}
+                  >
+                    Team Members
+                  </Link>
+                </Typography>
+                <Typography
+                  as="li"
+                  variant="xl"
+                  color="white"
+                  className="p-1 font-normal"
+                >
+                  <Link
+                    className="flex items-center custom-font1 text-[2rem]"
+                    onClick={() => {
+                      SnackBar("Coming Soon");
+                    }}
+                  >
+                    Sponsers
+                  </Link>
+                </Typography>
+                <Typography
+                  as="li"
+                  variant="xl"
+                  color="white"
+                  className="p-1 font-normal"
+                >
+                  <Link
+                    className="flex items-center custom-font1 text-[2rem]"
+                    onClick={() => {
+                      SnackBar("Coming Soon");
+                    }}
+                  >
+                    Projects
+                  </Link>
+                </Typography>
+              </div>
+            </div>
+          </div>
+          <div className="mt-16">
+            <SocialLinks />
+          </div>
         </div>
-        
-    );
+      </Dialog>
+    </div>
+  );
 };
 
-export default NavbarDefault;
+export default NavBar;

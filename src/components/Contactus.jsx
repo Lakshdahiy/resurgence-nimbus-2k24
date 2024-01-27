@@ -11,43 +11,45 @@ const Contactus = () => {
                         Contact Us
                     </h2>
                 </div>
-                <div className="lg:px-[150px]">
-                    <div>
-                        <span className=" custom-font3 uppercase text-sm text-white font-bold">
-                            Full Name
-                        </span>
-                        <input
-                            className="w-full bg-[#272829] text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text"
-                            placeholder=""
-                        />
+                <div className="flex w-[100%">
+                    <div className="w-[100%] m-1">
+                        <div>
+                            <span className=" custom-font3 uppercase text-sm text-white font-bold">
+                                Full Name
+                            </span>
+                            <input
+                                className="w-full bg-[#272829] text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                type="text"
+                                placeholder=""
+                            />
+                        </div>
+                        <div className="mt-8">
+                            <span className="custom-font3 uppercase text-sm text-white font-bold">
+                                Email
+                            </span>
+                            <input
+                                className="w-full bg-[#272829] text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                type="text"
+                            />
+                        </div>
+                        <div className="mt-8">
+                            <span className="custom-font3 uppercase text-sm text-white font-bold">
+                                Message
+                            </span>
+                            <textarea
+                                className="w-full h-32 bg-[#272829] text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                defaultValue={""}
+                            />
+                        </div>
+                        <div className="mt-8">
+                            <button className="custom-font3 uppercase text-sm font-bold tracking-wide bg-[#61677A] text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+                                Send Message
+                            </button>
+                        </div>
                     </div>
-                    <div className="mt-8">
-                        <span className="custom-font3 uppercase text-sm text-white font-bold">
-                            Email
-                        </span>
-                        <input
-                            className="w-full bg-[#272829] text-white mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="text"
-                        />
+                    <div className="w-[50%] flex justify-center h-[100%] m-1">
+                        <EarthCanvas />
                     </div>
-                    <div className="mt-8">
-                        <span className="custom-font3 uppercase text-sm text-white font-bold">
-                            Message
-                        </span>
-                        <textarea
-                            className="w-full h-32 bg-[#272829] text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                            defaultValue={""}
-                        />
-                    </div>
-                    <div className="mt-8">
-                        <button className="custom-font3 uppercase text-sm font-bold tracking-wide bg-[#61677A] text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
-                            Send Message
-                        </button>
-                    </div>
-                </div>
-                <div className="w-[50%] flex justify-center h-[100%]">
-                    <EarthCanvas />
                 </div>
             </div>
         </>
