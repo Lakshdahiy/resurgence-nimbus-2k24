@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import config from "../App.config";
 import images from "../assets/images/images";
-import Service from "./Service.jsx";
+import Service from "./service.jsx";
 
 const Overview = () => {
     return (
@@ -29,12 +29,12 @@ const Overview = () => {
                         matches
                     </Typography>
                     <div className="grid grid-cols-1 lg:grid-cols-4 ml-16 lg:m-4 lg:p-[40px]">
-                    {config.whatDoWeDo.map((service, index) => {
+                    {config.whatDoWeDo.map((myService, index) => {
                         return (
                             <Service
-                                key={service.title}
+                                key={myService.title}
                                 index={index}
-                                {...service}
+                                {...myService}
                             />
                         );
                     })}
