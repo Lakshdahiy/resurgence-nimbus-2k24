@@ -33,7 +33,7 @@ const NavBar = () => {
                 variant="text"
                 color="white"
                 onClick={handleOpen}
-                className="mx-1 text-[1.2rem] bg-[rgba(0,0,0,0.9)]"
+                className="mx-12 my-1 text-[1.2rem] bg-[rgba(0,0,0,0.9)]"
               >
                 X
               </Button>
