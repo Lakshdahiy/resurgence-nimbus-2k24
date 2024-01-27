@@ -2,10 +2,7 @@ import React,{useEffect} from "react";
 import { Tilt } from "react-tilt";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import config from "../App.config";
 import images from "../assets/images/images";
-
-
 
 const Service =({ index, title }) => {
     const controls = useAnimation();

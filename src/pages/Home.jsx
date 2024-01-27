@@ -1,11 +1,7 @@
 import HorizontalLine from "../components/HorizontalLine";
 import Overview from "../components/Overview";
 import GameOn from "../components/GameOn";
-import BackgroundParticles from "../components/BackgroundParticles";
-import ContactUs from "../components/Contactus";
 import FooterWithLogo from "../components/Footer";
-// import Service from "../components/service.jsx";
-import config from "../App.config";
 import "../components/WhatDoWeDo.css";
 import "./Home.scss";
 import React from "react";
@@ -14,9 +10,6 @@ import Sponsors from "../components/sponsors";
 const Home = () => {
   return (
     <>
-      {/* <div className="absolute z-[-1] ">
-                <BackgroundParticles />
-            </div> */}
       <img
         src={logo}
         alt="sad"
