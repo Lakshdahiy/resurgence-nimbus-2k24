@@ -1,9 +1,5 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Typography } from "@material-tailwind/react";
-import ProfileCard from "./profileCard";
-import ProfileCard2 from "./profileCard2";
-import Team from "../team_list - Copy.json";
 
 
 

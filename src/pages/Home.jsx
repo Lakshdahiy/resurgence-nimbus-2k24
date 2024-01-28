@@ -64,12 +64,12 @@ const Home = () => {
                 <div className="font-black text:[20px] mb-12 lg:mb-0">Next most important 😊</div>
                 <div className="font-black lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Fun</div>
                 <div className="font-black text:[20px] mb-12 lg:mb-0">Goes side by side</div>
-                {/* <img className="h-[150px] " src={IMAGES[7]} /> */}
 
           </div>
 
         </div>
 
+        {/* previous hero section */}
         {/* <div>
           <div className=" w-screen h-screen ">
             <div

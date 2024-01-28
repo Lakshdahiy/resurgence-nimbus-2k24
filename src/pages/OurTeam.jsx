@@ -3,7 +3,7 @@ import BackgroundBlogCard from "../components/teamBgCard";
 import ProfileCard from "../components/profileCard";
 import TeamCarousel from "../components/teamCarousel";
 import { Typography } from "@material-tailwind/react";
-import Team from "../team_list - Copy.json";
+import Team from "../team_list";
 import Carousel from "react-multi-carousel";
 import BackgroundParticles from "../components/BackgroundParticles";
 import FooterWithLogo from "../components/Footer";
@@ -31,9 +31,11 @@ const responsive = {
 const Events = () => {
   return (
     <>
-      <div className="relative bg-primary">
+      <div className="relative ">
         <div className="absolute z-[-1] inset-0 bg-gray-900 bg-opacity-40 backdrop-blur-sm" />
         <BackgroundBlogCard />
+        {/* <ProfileCard /> */}
+        {/* <BackgroundParticles /> */}
         <h1 className="text-white text-[2.5rem] text-center mt-12 lg:ml-14 custom-font2 flex justify-center">
           FINAL YEAR
         </h1>
@@ -49,6 +51,7 @@ const Events = () => {
           keyBoardControl={true}
           containerClass="carousel-container"
           removeArrowOnDeviceType={["tablet", "mobile"]}
+          // dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px my-4"
           partialVisbile
           className="px-8 lg:p-12"
