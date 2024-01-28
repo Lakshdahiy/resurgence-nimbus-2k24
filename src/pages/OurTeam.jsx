@@ -31,7 +31,7 @@ const responsive = {
 const Events = () => {
   return (
     <>
-      <div className="relative ">
+      <div className="relative bg-primary">
         <div className="absolute z-[-1] inset-0 bg-gray-900 bg-opacity-40 backdrop-blur-sm" />
         <BackgroundBlogCard />
         {/* <ProfileCard /> */}
