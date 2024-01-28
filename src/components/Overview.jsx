@@ -28,7 +28,7 @@ const Overview = () => {
                         communicate with each other before, during, and after
                         matches
                     </Typography>
-                    <div className="grid grid-cols-1 lg:grid-cols-4 ml-16 lg:m-4 lg:p-[40px]">
+                    <div className="flex flex-col lg:flex-row lg:m-4 lg:p-[40px]">
                     {config.whatDoWeDo.map((myService, index) => {
                         return (
                             <Service

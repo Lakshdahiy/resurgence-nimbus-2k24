@@ -20,29 +20,29 @@ const Home = () => {
           alt="Resurgence"
           className="hidden lg:block h-[5rem] mt-1"
         />
-        <Typography className="font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">
+        <Typography className="my-8 mx-8 lg:my-0 lg:mx-0 font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">
           Resurgence
         </Typography>
       </div>
       <div className="relative bg-primary">
-        <div className="flex justify-between w-screen h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center items-center">
-          <div className="flex flex-col items-center">
-            <div className="ml-8 mt-8">
-              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+        <div className="flex flex-col lg:flex-row justify-between lg:w-screen lg:h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center lg:items-center">
+          <div className="flex items-center">
+            <div className="ml-8 lg:mt-32 h-screen lg:h-auto my-36 lg:my-8">
+              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
                 Bring
               </Typography>
-              <Typography className="glitch text-[#915eff] font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+              <Typography className="glitch text-[#915eff] font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
                 Gaming
               </Typography>
-              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
                 In your
               </Typography>
-              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
                 Life!
               </Typography>
 
               <Button
-                className="bg-[#915eff] no_underline rounded-xl text-[20px] font-black mt-6"
+                className="bg-[#915eff] no_underline rounded-xl text-[20px] font-black mt-6 my-8 lg:my-0"
                 onClick={(e) => {
                   window.location.href = "mailto:resurgencenith@gmail.com";
                   e.preventDefault();
@@ -54,13 +54,20 @@ const Home = () => {
             </div>
           </div>
           <div className="">
-            <img src={IMAGES[6]} alt="Resurgence" className="h-screen" />
+            {/* controller image  */}
+            <img src={IMAGES[6]} alt="Resurgence" className="hidden h-screen lg:block" />
           </div>
-          <div className="flex flex-col grow ">
-                <div className="font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">Gaming</div>
-                <div className="font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">Learning</div>
-                <div className="font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">Development</div>
+          <div className="flex flex-col grow ml-8 mt-8">
+                <div className="font-black lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Gaming</div>
+                <div className="font-black text:[20px] mb-12 lg:mb-0">Probably most important</div>
+                <div className="font-black lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Learning</div>
+                <div className="font-black text:[20px] mb-12 lg:mb-0">Next most important 😊</div>
+                <div className="font-black lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Fun</div>
+                <div className="font-black text:[20px] mb-12 lg:mb-0">Goes side by side</div>
+                {/* <img className="h-[150px] " src={IMAGES[7]} /> */}
+
           </div>
+
         </div>
 
         {/* <div>

@@ -14,7 +14,7 @@ const Sponsors = () => {
                 <Typography className="custom-font1 text-[1.5rem] lg:text-[4rem] px-3  py-8 justify-center flex text-center">
                     In Corporation With
                 </Typography>
-                <div className="hillfaiir flex justify-center items-center gap-[4rem]">
+                <div className="hillfaiir flex flex-col lg:flex-row justify-center items-center gap-[4rem]">
                     <div> <img
                         className="w-48 lg:h-96 lg:w-96  object-cover "
                         src={image}

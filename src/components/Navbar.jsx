@@ -33,21 +33,21 @@ const NavBar = () => {
                 variant="text"
                 color="white"
                 onClick={handleOpen}
-                className="mx-12 my-1 text-[1.2rem] bg-[rgba(0,0,0,0.9)]"
+                className="mx-4 lg:mx-12 my-0 lg:my-1 text-[1.2rem] bg-[rgba(0,0,0,0.9)]"
               >
                 X
               </Button>
             </DialogHeader>
           </div>
-          <div className="flex justify-around">
+          <div className="flex flex-col lg:flex-row justify-around">
             <div className="img flex justify-center">
               <img
                 className="w-48 lg:h-96 lg:w-96  object-cover "
                 src={image}
-                alt="nature image"
+                alt="logo"
               />
             </div>
-            <div className="flex flex-col lg:flex-row justify-evenly gap-4 ">
+            <div className="flex flex-row lg:flex-row justify-evenly gap-4 ">
               <div className="flex flex-col  justify-center items-center gap-4">
                 <Typography
                   as="li"
