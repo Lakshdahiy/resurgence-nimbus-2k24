@@ -337,7 +337,7 @@ export default function FlappyBird() {
   }
 
   function draw() {
-    sctx.fillStyle = "#171717";
+    sctx.fillStyle = "#050816";
     sctx.fillRect(0, 0, scrn.width, scrn.height);
     bg.draw();
     pipe.draw();

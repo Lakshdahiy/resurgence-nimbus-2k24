@@ -22,7 +22,7 @@ const GameOn = () => {
                 </div>
                 <div className="">
                     <canvas
-                        className="mx-auto mb-10 border-solid border-2 border-white rounded"
+                        className="mx-auto mb-10 border-solid border-2 border-white rounded green-pink-gradient"
                         id="canvas"
                         width="276"
                         height="414"

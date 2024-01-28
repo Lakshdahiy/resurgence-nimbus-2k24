@@ -7,17 +7,63 @@ import "./Home.scss";
 import React from "react";
 import logo from "../assets/images/logo.png";
 import Sponsors from "../components/sponsors";
+import IMAGES from "../assets/images/images.jsx";
+import { Button, Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <>
-      <img
-        src={logo}
-        alt="sad"
-        className="absolute z-[30] hidden lg:block w-[10rem]   "
-      />
-      <div className="relative">
-        <div className="absolute z-[-1] inset-0 bg-gray-900 bg-opacity-40 backdrop-blur-sm" />
-        <div>
+      <div className="flex absolute z-[30]">
+        <img
+          src={logo}
+          alt="Resurgence"
+          className="hidden lg:block h-[5rem] mt-1"
+        />
+        <Typography className="font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">
+          Resurgence
+        </Typography>
+      </div>
+      <div className="relative bg-primary">
+        <div className="flex justify-between w-screen h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center items-center">
+          <div className="flex flex-col items-center">
+            <div className="ml-8 mt-8">
+              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+                Bring
+              </Typography>
+              <Typography className="glitch text-[#915eff] font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+                Gaming
+              </Typography>
+              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+                In your
+              </Typography>
+              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+                Life!
+              </Typography>
+
+              <Button
+                className="bg-[#915eff] no_underline rounded-xl text-[20px] font-black mt-6"
+                onClick={(e) => {
+                  window.location.href = "mailto:resurgencenith@gmail.com";
+                  e.preventDefault();
+                }}
+              >
+                Contact Us
+              </Button>
+              {/* <MailTo className="bg-[#915eff] mt-8" mailto="mail"/> */}
+            </div>
+          </div>
+          <div className="">
+            <img src={IMAGES[6]} alt="Resurgence" className="h-screen" />
+          </div>
+          <div className="flex flex-col grow ">
+                <div className="font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">Gaming</div>
+                <div className="font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">Learning</div>
+                <div className="font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">Development</div>
+          </div>
+        </div>
+
+        {/* <div>
           <div className=" w-screen h-screen ">
             <div
               className="flex w-screen h-screen justify-evenly items-center 
@@ -42,7 +88,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <HorizontalLine />
 

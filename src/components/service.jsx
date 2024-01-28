@@ -13,9 +13,9 @@ const Service =({ index, title }) => {
         }
     }, [controls, inView]);
     return (
-        <Tilt className="card_outer">
+        <Tilt className="xs:w-[250px] w-full">
             <motion.div
-                className="card"
+                className="'w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card m-5"
                 initial={{ x: "-150px", opacity: 0 }}
                 transition={{
                     type: "spring",
@@ -33,15 +33,15 @@ const Service =({ index, title }) => {
                         scale: 1,
                         speed: 450,
                     }}
-                    className="card-inner"
+                    className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
                 >
                     <img
                         src={images[index]}
                         alt="web-development"
-                        className="card_image"
+                        className="w-16 h-16 object-contain"
                     />
 
-                    <h3 className="card_title">{title}</h3>
+                    <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
                 </div>
             </motion.div>
         </Tilt>
