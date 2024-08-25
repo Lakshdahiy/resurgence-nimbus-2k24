@@ -28,16 +28,16 @@ const Home = () => {
         <div className="flex flex-col lg:flex-row justify-between lg:w-screen lg:h-screen bg-hero-pattern bg-cover bg-no-repeat bg-center lg:items-center">
           <div className="flex items-center">
             <div className="ml-8 lg:mt-32 h-screen lg:h-auto my-36 lg:my-8">
-              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
+              <Typography className="font-customFont lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
                 Bring
               </Typography>
-              <Typography className="glitch text-[#915eff] font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
+              <Typography className="glitch text-[#915eff] font-customFont lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
                 Gaming
               </Typography>
-              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
+              <Typography className="font-customFont lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
                 In your
               </Typography>
-              <Typography className="font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
+              <Typography className="font-customFont lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 my-8 lg:my-0">
                 Life!
               </Typography>
 
@@ -58,12 +58,12 @@ const Home = () => {
             <img src={IMAGES[6]} alt="Resurgence" className="hidden h-screen lg:block" />
           </div>
           <div className="flex flex-col grow ml-8 mt-8">
-                <div className="font-black lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Gaming</div>
-                <div className="font-black text:[20px] mb-12 lg:mb-0">Probably most important</div>
-                <div className="font-black lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Learning</div>
-                <div className="font-black text:[20px] mb-12 lg:mb-0">Next most important 😊</div>
-                <div className="font-black lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Fun</div>
-                <div className="font-black text:[20px] mb-12 lg:mb-0">Goes side by side</div>
+                <div className="font-customFont lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Gaming</div>
+                <div className="font-customFont text:[20px] mb-12 lg:mb-0">Probably most important</div>
+                <div className="font-customFont lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Learning</div>
+                <div className="font-customFont text:[20px] mb-12 lg:mb-0">Next most important 😊</div>
+                <div className="font-customFont lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Fun</div>
+                <div className="font-customFont text:[20px] mb-12 lg:mb-0">Goes side by side</div>
 
           </div>
 

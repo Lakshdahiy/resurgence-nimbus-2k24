@@ -1,4 +1,5 @@
 import { Chrono } from "react-chrono";
+import Slider from "react-slick";
 import { events } from "../config";
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
@@ -13,6 +14,19 @@ const Home = () => {
             controls.start("show");
         }
     }, [controls, inView]);
+
+    const setting ={
+        dots:true,
+        infinite:true,
+        speed:1,
+        slidesToShow:1,
+        slidesToScroll:1,
+        autoplay:true,
+        autoplayspeed:100,
+        fade: true,
+        pauseOnHover: false,
+        
+    };
     return (
         <div className="w-screen">
             <motion.div
@@ -27,31 +41,26 @@ const Home = () => {
                 animate={controls}
                 variants={{ show: { x: 0, y: 0, opacity: 1 } }}
             >
-                <Chrono
-                    items={items}
-                    mode="VERTICAL_ALTERNATING"
-                    hideControls="false"
-                    cardHeight="400"
-                    cardWidth="400"
-                    fontSizes={{
-                        cardSubtitle: '1rem',
-                        cardText: '0.8rem',
-                        cardTitle: '1.4rem',
-                        title: '1.5rem',
-                    }}
-                    mediaHeight="400"
-                    theme={{
-                        primary: "#DB1F48",
-                        secondary: "white",
-                        cardBgColor: "rgba(0, 0, 0, 0.51)",
-                        titleColor: "white",
-                        cardDetailsColor: "white",
-                        cardTitleColor:"white",
-                        
-                    }}
-                />
+                <Slider {...setting}>
+                    {events.map((events, index)=>(
+                        <div key={index} className="p-4 flex justify-center items-center">
+                            <div className="text-center">
+                                <img
+                                src={events.media.source.url}
+                                alt={events.cardTitle}
+                                className="w-full max-w-2xl h-auto object-contain mx-auto"/>
+                                <h2 className="text-2xl text-white mt-4">{events.cardTitle}</h2>
+                                <p className="text-white mt-2">{events.cardDetailedText}</p>
+                            </div>
+
+            </div>
+         ))}
+        </Slider>
+        </motion.div>
+                   
                 
-            </motion.div>
+                
+           
         </div>
     );
 };

@@ -53,11 +53,11 @@ const NavBar = () => {
                   as="li"
                   variant="xl"
                   color="white"
-                  className="p-1 font-normal"
+                  className="p-1 font-black"
                 >
                   <Link
                     to="/home"
-                    className=" flex items-center custom-font1 text-[2rem]"
+                    className=" flex items-center font-customFont text-[2rem]"
                     onClick={handleOpen}
                   >
                     HOME
@@ -71,7 +71,7 @@ const NavBar = () => {
                 >
                   <Link
                     to="/events"
-                    className="flex items-center custom-font1 text-[2rem]"
+                    className="flex items-center font-customFont text-[2rem]"
                     onClick={handleOpen}
                   >
                     Events
@@ -85,7 +85,7 @@ const NavBar = () => {
                 >
                   <Link
                     to="/team"
-                    className="flex items-center custom-font1 text-[2rem]"
+                    className="flex items-center font-customFont text-[2rem]"
                     onClick={handleOpen}
                   >
                     Team Members
@@ -98,7 +98,7 @@ const NavBar = () => {
                   className="p-1 font-normal"
                 >
                   <Link
-                    className="flex items-center custom-font1 text-[2rem]"
+                    className="flex items-center font-customFont text-[2rem]"
                     onClick={() => {
                       SnackBar("Coming Soon");
                     }}
@@ -113,7 +113,7 @@ const NavBar = () => {
                   className="p-1 font-normal"
                 >
                   <Link
-                    className="flex items-center custom-font1 text-[2rem]"
+                    className="flex items-center font-customFont text-[2rem]"
                     onClick={() => {
                       SnackBar("Coming Soon");
                     }}

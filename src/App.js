@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import OurTeam from "./pages/OurTeam";
 import Events from "./pages/Events";
 import NavBar from "./components/Navbar";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   return (

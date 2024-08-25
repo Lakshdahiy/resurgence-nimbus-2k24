@@ -4,7 +4,8 @@ module.exports = withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
+      fontFamily:{
+        customFont:["plaguard","sans"],
         poppins: ["Poppins", "sans"],
       },
       backgroundImage: {
