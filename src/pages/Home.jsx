@@ -10,6 +10,8 @@ import Sponsors from "../components/sponsors";
 import IMAGES from "../assets/images/images.jsx";
 import { Button, Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import controller from "../controller.json"
 
 const Home = () => {
   return (
@@ -20,7 +22,7 @@ const Home = () => {
           alt="Resurgence"
           className="hidden lg:block h-[5rem] mt-1"
         />
-        <Typography className="my-8 mx-8 lg:my-0 lg:mx-0 font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">
+        <Typography className="font-customFont my-8 mx-8 lg:my-0 lg:mx-0 font-black lg:text-[30px] sm:text-[25px] xs:text-[20px] text-[15px] lg:leading-[98px]">
           Resurgence
         </Typography>
       </div>
@@ -42,7 +44,7 @@ const Home = () => {
               </Typography>
 
               <Button
-                className="bg-[#915eff] no_underline rounded-xl text-[20px] font-black mt-6 my-8 lg:my-0"
+                className="bg-[#915eff] no_underline rounded-xl text-[20px] font-customFont mt-6 my-8 lg:my-0"
                 onClick={(e) => {
                   window.location.href = "mailto:resurgencenith@gmail.com";
                   e.preventDefault();
@@ -51,13 +53,20 @@ const Home = () => {
                 Contact Us
               </Button>
               {/* <MailTo className="bg-[#915eff] mt-8" mailto="mail"/> */}
-            </div>
+              </div>
           </div>
-          <div className="">
-            {/* controller image  */}
-            <img src={IMAGES[6]} alt="Resurgence" className="hidden h-screen lg:block" />
-          </div>
-          <div className="flex flex-col grow ml-8 mt-8">
+          <div>
+        {/* controller image */}
+        <Lottie 
+        animationData={controller}
+          className="w-[600px] h-[600px] justify-center ml-24"  // Tailwind dynamic sizing with specific px values
+        />
+      </div>
+    
+
+
+
+          <div className="flex flex-col grow ml-8 mt-8 p-24">
                 <div className="font-customFont lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Gaming</div>
                 <div className="font-customFont text:[20px] mb-12 lg:mb-0">Probably most important</div>
                 <div className="font-customFont lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Learning</div>
