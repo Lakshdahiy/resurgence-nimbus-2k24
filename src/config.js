@@ -2,32 +2,57 @@ import squid from "../src/assets/images/SQUID GAMES8.webp"
 
 const events = [
     {
+        
         title: "",
         cardTitle: "Valorant-Try Outs",
-        url: "",
         cardSubtitle: "",
-        cardDetailedText:
-            "To experience the adrenaline rush of Valorant , welcome to the world of Valorant, where every shot counts, and every decision matters. Team Resurgence is excited to announce the upcoming Valorant tryouts, where you can showcase your talent with your team ",
+        cardDetailedText: (
+            <span>
+                TO REGISTER{" "}
+                <a 
+                    href="https://forms.gle/z8fmh1S5q9dJidUUA" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-200"
+                >
+                    Click Here
+                </a>
+            </span>
+        ),
+        registrationLink: "https://forms.gle/z8fmh1S5q9dJidUUA", 
         media: {
             type: "IMAGE",
             source: {
-                url: "https://res.cloudinary.com/dbcuaopfk/image/upload/v1696961477/Snapinsta.app_373048871_828255128897517_928390467703619990_n_1080_d0tzu6.jpg",
+                url: "https://res.cloudinary.com/dmqszvc2p/image/upload/VALORANT_hjyunm.jpg",
             },
         },
     },
     {
         title: "",
         cardTitle: "BGMI-Try Outs",
-        url: "",
         cardSubtitle: "",
-        cardDetailedText: "The competitive scene of BGMI is marked by intense gameplay, intricate strategies, and nail-biting moments, making it a captivating and fast-growing sector in the world of esports. So charge your devices and load your guns because BGMI TRYOUTS are back again in the flow",
+        cardDetailedText: (
+            <span>
+                 TO REGISTER,{" "}
+                <a 
+                    href="https://forms.gle/npLpsDatYm2egh7a6" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-200"
+                >
+                    Click Here
+                </a>
+            </span>
+        ),
+        registrationLink: "https://forms.gle/npLpsDatYm2egh7a6", 
         media: {
             type: "IMAGE",
             source: {
-                url: "https://res.cloudinary.com/dbcuaopfk/image/upload/v1696961477/WhatsApp_Image_2023-10-10_at_22.03.20_gqi4nk.jpg",
+                url: "https://res.cloudinary.com/dmqszvc2p/image/upload/BGMI5_tlhkrj.jpg",
             },
         },
     },
+    
     {
         title: "",
         cardTitle: "Stumble Guys",

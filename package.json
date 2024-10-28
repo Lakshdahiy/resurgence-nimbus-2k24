@@ -20,6 +20,7 @@
     "gasp": "^0.0.2",
     "gltf-loader": "^1.0.0",
     "http-server": "^14.1.1",
+    "lottie-react": "^2.4.0",
     "overlay-navbar": "^1.2.3",
     "react": "^18.2.0",
     "react-chrono": "^2.3.0",

@@ -5,7 +5,7 @@ module.exports = withMT({
   theme: {
     extend: {
       fontFamily:{
-        customFont:["plaguard","sans"],
+        customFont:["poppins","sans"],
         poppins: ["Poppins", "sans"],
       },
       backgroundImage: {

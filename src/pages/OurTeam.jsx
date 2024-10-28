@@ -54,7 +54,7 @@ const Events = () => {
           // dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px my-4"
           partialVisbile
-          className="px-8 lg:p-12"
+          className="px-8 lg:p-0"
         >
           {Team["final_year"].map((elem) => {
             const { name, post, photo, linkedin, instagram } = elem;
