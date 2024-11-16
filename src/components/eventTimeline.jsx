@@ -1,36 +1,11 @@
-import { Chrono } from "react-chrono";
 import Slider from "react-slick";
 import { events } from "../config";
 import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-const CustomPrevArrow = (props) => {
-    return (
-        <div
-            className="absolute left-4 z-10 flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full cursor-pointer"
-            onClick={props.onClick}
-            style={{ top: "30%", transform: "translateY(-50%)" }} 
-        >
-            
-        </div>
-    );
-};
-
-const CustomNextArrow = (props) => {
-    return (
-        <div
-            className="absolute right-4 z-10 flex items-center justify-center w-12 h-12 bg-gray-800 text-white rounded-full cursor-pointer"
-            onClick={props.onClick}
-            style={{ top: "30%", transform: "translateY(-50%)",  } } 
-        >
-            &gt; {/* You can also use an icon here */}
-        </div>
-    );
-};
-
 const Home = () => {
-    const items = events;
+    const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const controls = useAnimation();
     const [ref, inView] = useInView();
 
@@ -40,17 +15,17 @@ const Home = () => {
         }
     }, [controls, inView]);
 
-    const setting = {
-        dots: true,
+    const settings = {
+        dots: false,
         infinite: true,
         speed: 1,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true, // Enable autoplay
+        autoplaySpeed: 6000, // Time between slides
         fade: true,
-        pauseOnHover: false,
-        prevArrow: <CustomPrevArrow />,
-        nextArrow: <CustomNextArrow />,
+        pauseOnHover: true,
+        afterChange: (current) => setCurrentEventIndex(current),
     };
 
     return (
@@ -67,24 +42,60 @@ const Home = () => {
                 animate={controls}
                 variants={{ show: { x: 0, y: 0, opacity: 1 } }}
             >
-                <Slider {...setting}>
+                {/* Main Event Display */}
+                <div className="p-4 flex justify-center items-center">
+                    <div className="text-center">
+                        <img
+                            src={events[currentEventIndex].media.source.url}
+                            alt={events[currentEventIndex].cardTitle}
+                            className="w-full max-w-xl h-auto object-contain mx-auto" // Reduced size
+                        />
+                        <h2 className="text-3xl text-white mt-4 font-bold max-w-xl mx-auto">
+                            {events[currentEventIndex].cardTitle}
+                        </h2>
+                        <p className="text-white mt-2 max-w-xl mx-auto">
+                            {events[currentEventIndex].cardDetailedText}
+                        </p>
+                    </div>
+                </div>
+
+                {/* Upcoming Events Thumbnails */}
+                <div className="flex justify-center mt-8 gap-4">
                     {events.map((event, index) => (
-                        <div key={index} className="p-4 flex justify-center items-center">
-                            <div className="text-center">
-                                <img
-                                    src={event.media.source.url}
-                                    alt={event.cardTitle}
-                                    className="w-full max-w-2xl h-auto object-contain mx-auto"
-                                />
-                                <h2 className="text-2xl text-white mt-4">{event.cardTitle}</h2>
-                                <p className="text-white mt-2">{event.cardDetailedText}</p>
-                            </div>
+                        <div
+                            key={index}
+                            className={`cursor-pointer p-2 border-2 ${
+                                index === currentEventIndex ? "border-yellow-500" : "border-transparent"
+                            } rounded-md`}
+                            onClick={() => setCurrentEventIndex(index)}
+                        >
+                            <img
+                                src={event.media.source.url}
+                                alt={event.cardTitle}
+                                className="w-24 h-24 object-cover rounded-md"
+                            />
                         </div>
                     ))}
-                </Slider>
+                </div>
+
+                {/* Event Details Carousel */}
+                <div className="mt-12">
+                    <Slider {...settings}>
+                        {events.map((event, index) => (
+                            <div key={index} className="p-4 flex justify-center items-center">
+                                <div className="text-center">
+                                    {/* Removed the text below the sub-main photo */}
+                                    {/* Removed the arrows */}
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
             </motion.div>
         </div>
     );
 };
 
 export default Home;
+
+
