@@ -11,7 +11,7 @@ import IMAGES from "../assets/images/images.jsx";
 import { Button, Typography } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
-import controller from "../controller2.json"
+import controller from "../controller.json"
 
 const Home = () => {
   return (
