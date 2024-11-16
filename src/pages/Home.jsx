@@ -55,18 +55,18 @@ const Home = () => {
               {/* <MailTo className="bg-[#915eff] mt-8" mailto="mail"/> */}
               </div>
           </div>
-          <div>
+          <div className="flex justify-center items-center w-full h-full ">
         {/* controller image */}
         <Lottie 
         animationData={controller}
-          className="w-[600px] h-[600px] justify-center ml-24"  // Tailwind dynamic sizing with specific px values
+          className="min-[w-200px] min-[h-200px] max-[w-3000px] max-[h-3000px]  ml-24 "  // Tailwind dynamic sizing with specific px values
         />
       </div>
     
 
 
 
-          <div className="flex flex-col grow ml-8 mt-8 p-24">
+          <div className="flex flex-col basis-0 flex-1 grow w-screen  ml-8 mt-8 p-24 justify-evenly items-center ">
                 <div className="font-customFont lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Gaming</div>
                 <div className="font-customFont text:[20px] mb-12 lg:mb-0">Probably most important</div>
                 <div className="font-customFont lg:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] lg:leading-[98px] mb-6 lg:mb-0">Learning</div>

@@ -1,8 +1,7 @@
-import { Chrono } from "react-chrono";
 import Slider from "react-slick";
 import { events } from "../config";
 import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 const CustomPrevArrow = (props) => {
@@ -30,9 +29,10 @@ const CustomNextArrow = (props) => {
 };
 
 const Home = () => {
-    const items = events;
+    const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const controls = useAnimation();
     const [ref, inView] = useInView();
+
 
     useEffect(() => {
         if (inView) {
@@ -40,17 +40,17 @@ const Home = () => {
         }
     }, [controls, inView]);
 
-    const setting = {
-        dots: true,
-        infinite: true,
-        speed: 1,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
+    const setting ={
+        dots:true,
+        infinite:true,
+        speed:1,
+        slidesToShow:1,
+        slidesToScroll:1,
+        autoplay:true,
+        autoplayspeed:100,
         fade: true,
         pauseOnHover: false,
-        prevArrow: <CustomPrevArrow />,
-        nextArrow: <CustomNextArrow />,
+        
     };
 
     return (
@@ -68,23 +68,29 @@ const Home = () => {
                 variants={{ show: { x: 0, y: 0, opacity: 1 } }}
             >
                 <Slider {...setting}>
-                    {events.map((event, index) => (
+                    {events.map((events, index)=>(
                         <div key={index} className="p-4 flex justify-center items-center">
                             <div className="text-center">
                                 <img
-                                    src={event.media.source.url}
-                                    alt={event.cardTitle}
-                                    className="w-full max-w-2xl h-auto object-contain mx-auto"
-                                />
-                                <h2 className="text-2xl text-white mt-4">{event.cardTitle}</h2>
-                                <p className="text-white mt-2">{event.cardDetailedText}</p>
+                                src={events.media.source.url}
+                                alt={events.cardTitle}
+                                className="w-full max-w-2xl h-auto object-contain mx-auto"/>
+                                <h2 className="text-2xl text-white mt-4">{events.cardTitle}</h2>
+                                <p className="text-white mt-2">{events.cardDetailedText}</p>
                             </div>
-                        </div>
-                    ))}
-                </Slider>
-            </motion.div>
+
+            </div>
+         ))}
+        </Slider>
+        </motion.div>
+                   
+                
+                
+           
         </div>
     );
 };
 
 export default Home;
+
+
